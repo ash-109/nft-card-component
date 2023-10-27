@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Soft-blue: hsl(215, 51%, 70%);
+  --White:hsl(0, 0%, 100%);
+  font-family: "Outfit";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--main-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  background-color: var(--card-bg);
+  height: 438px;
+  width: 240px;
+  border-radius: 14px;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.image {
+  position: relative;
+  height: 55%;
+  width: 100%;
+  background-image: url(images/image-equilibrium.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.card-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.eye {
+  visibility: hidden;
+}
+
+.image:hover {
+  cursor: pointer;
+  background-color: hsla(186, 91%, 52%, 0.642);
+  background-blend-mode: overlay;
+}
+.image:hover .eye {
+  visibility: visible;
+  z-index: 2;
+}
+
+#title{
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+#title:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+#title + p{
+  color: var(--Soft-blue);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.info {
+  margin-top: -0.55rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--Soft-blue);
+  font-size: 0.8rem;
+}
+.info p:first-of-type {
+  color: var(--Cyan);
+}
+#price, #deadline{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+}
+#price{
+  font-weight: 600;
+}
+
+
+.line {
+  height: 0.8px;
+  background: var(--line-color);
+  width: 100%;
+  margin-top: 0.5rem ;
+}
+footer {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+}
+footer img {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  border: 1px white solid;
+}
+footer p{
+  color: var(--Soft-blue);
+  font-size: 0.8rem;
+}
+footer span{
+  color: var(--White);
+}
+footer span:hover{
+  color: var(--Cyan);
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.attribution {
+  margin-top: 10px;
+  color: var(--White);
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+
+/* Mobile Design */ 
+@media  screen and (max-width:375px) {
+ 
+ 
+  .card{
+    width: 70% ;
+    height: 75vh;
+  }
+  .attribution{
+display: none;
+  }
+}
